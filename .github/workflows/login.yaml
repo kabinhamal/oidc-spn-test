@@ -1,5 +1,9 @@
 name: Run Azure Login with OpenID Connect
-on: [workflow_dispatch, push]
+on:
+  push:
+    branches:
+      - main
+
 
   
 permissions:
@@ -12,6 +16,7 @@ jobs:
     permissions:
       id-token: write
       contents: read
+    environment: prod
     steps:
     - name: 'Az CLI login'
       uses: azure/login@v1
@@ -24,4 +29,5 @@ jobs:
       run: |
           az account show
           az group list
-          pwd 
+          az group create -l eastus -n MyResourceGroup
+ 
