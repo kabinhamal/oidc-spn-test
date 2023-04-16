@@ -13,7 +13,7 @@ permissions:
 env:
   TF_LOG: INFO
   STORAGE_ACCOUNT: "tfstate5659"
-  CONTAINER_NAME: "aztfstate"
+  CONTAINER_NAME: "testspnstate"
   RESOURCE_GROUP: "tfstate"
   TF_KEY:  "test.tfstate"
   #TF_VARS: "auth.tfvars"
