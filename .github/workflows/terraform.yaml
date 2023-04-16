@@ -10,19 +10,26 @@ env:
   STORAGE_ACCOUNT: "tfstate5659"
   CONTAINER_NAME: "aztfstate"
   RESOURCE_GROUP: "tfstate"
-  TF_KEY:  "terraform.tfstate"
+  TF_KEY:  "test.tfstate"
   #TF_VARS: "auth.tfvars"
   
-  ###AZURE Client details###
-  ARM_CLIENT_ID: ${{ secrets.arm_client_id }}
-  ARM_CLIENT_SECRET: ${{ secrets.arm_client_secret }}
-  ARM_SUBSCRIPTION_ID: ${{ secrets.arm_subscription_id }}
-  ARM_TENANT_ID: ${{ secrets.arm_tenant_id }}
+#   ###AZURE Client details###
+#   ARM_CLIENT_ID: ${{ secrets.arm_client_id }}
+#   ARM_CLIENT_SECRET: ${{ secrets.arm_client_secret }}
+#   ARM_SUBSCRIPTION_ID: ${{ secrets.arm_subscription_id }}
+#   ARM_TENANT_ID: ${{ secrets.arm_tenant_id }}
       
 
 jobs: 
   deploy-infra:
     runs-on: ubuntu-latest
+    environment: prod
+    env:
+      ARM_CLIENT_ID: ${{ secrets.arm_client_id }}
+      ARM_CLIENT_SECRET: ${{ secrets.arm_client_secret }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.arm_subscription_id }}
+      ARM_TENANT_ID: ${{ secrets.arm_tenant_id }}
+      
     defaults:
       run:
         shell: bash
