@@ -2,7 +2,7 @@ name: Run Azure Login with OpenID Connect
 on:
   push:
     branches:
-      - main
+      - prod
 
 
   
@@ -29,5 +29,6 @@ jobs:
       run: |
           az account show
           az group list
-          az group create -l eastus -n MyResourceGroup
+          
+# az group create -l eastus -n MyResourceGroup
  
