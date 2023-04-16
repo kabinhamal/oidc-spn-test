@@ -5,6 +5,10 @@ on:
     branches:
       - main
       - prod
+      
+permissions:
+      id-token: write
+      contents: read
 
 env:
   TF_LOG: INFO
@@ -24,6 +28,9 @@ env:
 jobs: 
   deploy-infra:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     environment: prod
     env:
       ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
