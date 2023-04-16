@@ -12,13 +12,9 @@ terraform {
     }
   }
   backend "azurerm" {
-    use_oidc         = true
-    use_azuread_auth = true
-    key                   =        "terraform.tfstate"
-#     resource_group_name   =       "tfstate"
-#     storage_account_name  =       "tfstate15930"
-#     container_name        =        "tfstate"
-#     key                   =        "terraform.tfstate"
+    use_oidc         =        true
+    use_azuread_auth      =        true
+    key                   =   "terraform.tfstate"
   }
 }
 
@@ -31,13 +27,13 @@ provider "azurerm" {
   use_oidc = true
 }
 
-# Azure AD Provider
-provider "azuread" {
-  client_id       = var.azure_client_id
-  client_secret   = var.azure_client_secret
-  tenant_id       = var.azure_tenant_id
-  use_oidc         = true
-}
+# # Azure AD Provider
+# provider "azuread" {
+#   client_id       = var.azure_client_id
+#   client_secret   = var.azure_client_secret
+#   tenant_id       = var.azure_tenant_id
+#   use_oidc         = true
+# }
 
 
 
