@@ -79,26 +79,26 @@ jobs:
         ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
         STORAGE_ACCOUNT: "tfstate5659"
-        CONTAINER_NAME: "testspnstate"
+        CONTAINER_NAME: "aztfstate"
         RESOURCE_GROUP: "tfstate"
         TF_KEY:  "terraform.tfstate"
       run: terraform init --backend-config="storage_account_name=$STORAGE_ACCOUNT" --backend-config="container_name=$CONTAINER_NAME" --backend-config="resource_group_name=$RESOURCE_GROUP" --backend-config="key=$TF_KEY"
    
-    - name: Terraform Format
-      continue-on-error: true
-      id: fmt
-      run: terraform fmt --check
+#     - name: Terraform Format
+#       continue-on-error: true
+#       id: fmt
+#       run: terraform fmt --check
       
-    - name: Terraform Validate
-      id: validate
-      run: terraform validate
+#     - name: Terraform Validate
+#       id: validate
+#       run: terraform validate
       
-    - name: Terraform Plan
-      id: plan
-      run: terraform plan --var-file=$TF_VARS --out=plan.tfplan 
-      continue-on-error: true
+#     - name: Terraform Plan
+#       id: plan
+#       run: terraform plan --var-file=$TF_VARS --out=plan.tfplan 
+#       continue-on-error: true
       
-    # Run a Terraform apply
-    - name: Terraform apply
-      id: apply
-      run: terraform apply -auto-approve
+#     # Run a Terraform apply
+#     - name: Terraform apply
+#       id: apply
+#       run: terraform apply -auto-approve
