@@ -3,7 +3,7 @@ name: Push
 on:
   push:
     branches:
-      - main
+      #- main
       - prod
       
 permissions:
@@ -30,6 +30,7 @@ jobs:
       STORAGE_ACCOUNT: "tfstate5659"
       CONTAINER_NAME: "oidctest"
       TF_KEY:  "terraform.tfstate"
+      TF_VARS: "vars.tfvars"
       
     defaults:
       run:
