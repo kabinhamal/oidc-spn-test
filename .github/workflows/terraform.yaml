@@ -84,4 +84,4 @@ jobs:
     # Run a Terraform apply
     - name: Terraform apply
       id: apply
-      run: terraform apply -auto-approve
+      run: terraform apply --var-file=$TF_VARS-auto-approve
