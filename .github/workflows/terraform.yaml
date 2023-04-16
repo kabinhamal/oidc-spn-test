@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - prod
+     # - prod
       
 permissions:
       id-token: write
@@ -15,7 +15,7 @@ env:
   STORAGE_ACCOUNT: "tfstate5659"
   CONTAINER_NAME: "testspnstate"
   RESOURCE_GROUP: "tfstate"
-  TF_KEY:  "test.tfstate"
+  TF_KEY:  "terraform.tfstate"
   #TF_VARS: "auth.tfvars"
   
 #   ###AZURE Client details###
