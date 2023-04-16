@@ -14,6 +14,7 @@ terraform {
   backend "azurerm" {
     use_oidc         = true
     use_azuread_auth = true
+    key                   =        "terraform.tfstate"
 #     resource_group_name   =       "tfstate"
 #     storage_account_name  =       "tfstate15930"
 #     container_name        =        "tfstate"
