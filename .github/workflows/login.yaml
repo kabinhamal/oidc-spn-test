@@ -1,5 +1,9 @@
 name: Run Azure Login with OpenID Connect
-on: [workflow_dispatch, push]
+on:
+  push:
+    branches:
+      - main
+
 
   
 permissions:
