@@ -16,7 +16,7 @@ jobs:
     permissions:
       id-token: write
       contents: read
-    environment: prod
+    environment: pro
     steps:
     - name: 'Az CLI login'
       uses: azure/login@v1
