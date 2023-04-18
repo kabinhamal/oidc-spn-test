@@ -28,8 +28,8 @@ jobs:
       TF_API_TOKEN : ${{ secrets.TF_API_TOKEN }}
       
       TF_VAR_TFC_WORKLOAD_IDENTITY_AUDIENCE: "api://AzureADTokenExchange"
-      TFC_AZURE_PROVIDER_AUTH: true
-      TFC_AZURE_RUN_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      TF_VAR_TFC_AZURE_PROVIDER_AUTH: true
+      TF_VAR_TFC_AZURE_RUN_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       TF_VARS: "vars.tfvars"
       
     defaults:
