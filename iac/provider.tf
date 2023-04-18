@@ -10,13 +10,17 @@ terraform {
       version = "~>3.33.0"
       source  = "hashicorp/azurerm"    
     }
+    environment = {
+      source  = "EppO/environment"
+      version = "~>1.0"
+    }
+    local = {
+      source  = "hashicorp/local"
+      version = "~>2.0"
+    }
   }
-#   backend "azurerm" {
-#     use_oidc         =        true
-#     use_azuread_auth      =        true
-#     key                   =   "terraform.tfstate"
-#   }
-}
+  }
+
 
 
 terraform {
@@ -37,6 +41,7 @@ provider "azurerm" {
   client_id         = var.azure_client_id
   features {}
   use_oidc = true
+  oidc_token = data.environment_variables.all.items["TFC_WORKLOAD_IDENTITY_TOKEN"]
 }
 
 # Azure AD Provider
