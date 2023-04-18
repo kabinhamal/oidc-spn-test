@@ -22,13 +22,13 @@ variable "TFC_AZURE_PROVIDER_AUTH" {
   default = true
 }
 
-variable "TFC_AZURE_RUN_CLIENT_ID	" {
+variable "TFC_AZURE_RUN_CLIENT_ID" {
   type        = string
   description = "The Tenant ID should be used."
   default = "6849b684-2d1e-415b-ac28-44d9e6f9e35b"
 }
 
-variable "TFC_AZURE_RUN_CLIENT_ID	" {
+variable "TFC_AZURE_WORKLOAD_IDENTITY_AUDIENCE" {
   type        = string
   description = "The Tenant ID should be used."
   default = "api://AzureADTokenExchange"
