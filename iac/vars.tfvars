@@ -3,3 +3,4 @@
 # azure_tenant_id               = "f946600a-6e91-4c31-a96f-95977fd26317"
 resource_group_name           = "federated-rgp"
 location                      = "eastus"
+TFC_AZURE_RUN_CLIENT_ID       = "27122f0a-bd35-4942-aa35-a320f8527d73"
