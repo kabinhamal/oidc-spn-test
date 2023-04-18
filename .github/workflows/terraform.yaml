@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - sandbox
+      - dev
       
 permissions:
       id-token: write
