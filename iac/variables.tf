@@ -25,7 +25,7 @@ variable "TFC_AZURE_PROVIDER_AUTH" {
 variable "TFC_AZURE_RUN_CLIENT_ID" {
   type        = string
   description = "The Tenant ID should be used."
-  default = "6849b684-2d1e-415b-ac28-44d9e6f9e35b"
+  default = "27122f0a-bd35-4942-aa35-a320f8527d73"
 }
 
 variable "TFC_AZURE_WORKLOAD_IDENTITY_AUDIENCE" {
