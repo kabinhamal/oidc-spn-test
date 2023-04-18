@@ -16,6 +16,24 @@ variable "azure_tenant_id" {
   default = "f946600a-6e91-4c31-a96f-95977fd26317"
 }
 
+variable "TFC_AZURE_PROVIDER_AUTH" {
+  type        = bool
+  description = "The Tenant ID should be used."
+  default = true
+}
+
+variable "TFC_AZURE_RUN_CLIENT_ID	" {
+  type        = string
+  description = "The Tenant ID should be used."
+  default = "6849b684-2d1e-415b-ac28-44d9e6f9e35b"
+}
+
+variable "TFC_AZURE_RUN_CLIENT_ID	" {
+  type        = string
+  description = "The Tenant ID should be used."
+  default = "api://AzureADTokenExchange"
+}
+
 # variable "owner_id" {
 #   type        = string
 #   description = "(Optional) Object ID of owner to be assigned to service principal. Assigned to current user if not set."
