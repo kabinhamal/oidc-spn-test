@@ -28,7 +28,7 @@ terraform {
     organization = "kabin"
 
     workspaces {
-      name = "tfc_cloud"
+      name = "tfc_cloud2"
     }
   }
 }
