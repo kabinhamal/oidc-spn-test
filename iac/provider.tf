@@ -41,7 +41,7 @@ provider "azurerm" {
   client_id         = var.azure_client_id
   features {}
   use_oidc = true
-  oidc_token = data.environment_variables.all.items["TFC_WORKLOAD_IDENTITY_TOKEN"]
+  #oidc_token = data.environment_variables.all.items["TFC_WORKLOAD_IDENTITY_TOKEN"]
 }
 
 # Azure AD Provider
