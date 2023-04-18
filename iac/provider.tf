@@ -10,14 +10,13 @@ terraform {
       version = "~>3.33.0"
       source  = "hashicorp/azurerm"    
     }
-    environment = {
-      source  = "EppO/environment"
-      version = "~>1.0"
-    }
-    local = {
-      source  = "hashicorp/local"
-      version = "~>2.0"
-    }
+#       source  = "EppO/environment"
+#       version = "~>1.0"
+#     }
+#     local = {
+#       source  = "hashicorp/local"
+#       version = "~>2.0"
+#     }
   }
   }
 
