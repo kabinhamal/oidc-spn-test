@@ -22,7 +22,7 @@ variable "TFC_AZURE_PROVIDER_AUTH" {
   default = true
 }
 
-variable "TFC_AZURE_RUN_CLIENT_ID1" {
+variable "TFC_AZURE_RUN_CLIENT_ID" {
   type        = string
   description = "The Tenant ID should be used."
   default = "27122f0a-bd35-4942-aa35-a320f8527d73"
