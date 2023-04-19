@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - dev
+      
       
 permissions:
       id-token: write
@@ -29,7 +29,7 @@ jobs:
       
       TF_VAR_TFC_WORKLOAD_IDENTITY_AUDIENCE: "api://AzureADTokenExchange"
       TF_VAR_TFC_AZURE_PROVIDER_AUTH: true
-      TF_VAR_TFC_AZURE_RUN_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      TF_VAR_TFC_AZURE_RUN_CLIENT_ID1: ${{ secrets.AZURE_CLIENT_ID }}
       TF_VARS: "vars.tfvars"
       
     defaults:
