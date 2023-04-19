@@ -35,12 +35,12 @@ terraform {
 
 
 provider "azurerm" {
-#   tenant_id         = var.azure_tenant_id
-#   subscription_id   = var.azure_subscription_id
-#   client_id         = var.azure_client_id
+  tenant_id         = var.azure_tenant_id
+  subscription_id   = var.azure_subscription_id
+  client_id         = var.azure_client_id
   features {}
   use_oidc = true
-  #oidc_token = data.environment_variables.all.items["TFC_WORKLOAD_IDENTITY_TOKEN"]
+  oidc_token = data.environment_variables.all.items["TFC_WORKLOAD_IDENTITY_TOKEN"]
 }
 
 # # Azure AD Provider
