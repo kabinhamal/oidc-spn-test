@@ -25,12 +25,13 @@ terraform {
 
 terraform {
   cloud {
-    organization = "kabin"
+    organization = "hashi-kabin"
 
     workspaces {
       name = "tfc_cloud"
     }
   }
+}
 }
 
 
