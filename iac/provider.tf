@@ -11,23 +11,23 @@ terraform {
       source  = "hashicorp/azurerm"    
     }
   }
-#   backend "azurerm" {
-#     use_oidc         =        true
-#     use_azuread_auth      =        true
-#     key                   =   "terraform.tfstate"
-#   }
-}
-
-
-terraform {
-  cloud {
-    organization = "hashi-kabin"
-
-    workspaces {
-      name = "tfc_cloud"
-    }
+  backend "azurerm" {
+    use_oidc         =        true
+    use_azuread_auth      =        true
+    key                   =   "terraform.tfstate"
   }
 }
+
+
+# terraform {
+#   cloud {
+#     organization = "hashi-kabin"
+
+#     workspaces {
+#       name = "tfc_cloud"
+#     }
+#   }
+# }
 
 
 
